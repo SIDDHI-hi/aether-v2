@@ -1,0 +1,7 @@
+
+> aether@0.0.0 build
+> tsc -b && vite build
+
+src/App.tsx(8,26): error TS2307: Cannot find module '../../store/useStore' or its corresponding type declarations.
+src/components/panels/NLQueryPanel.tsx(2,18): error TS6133: 'AnimatePresence' is declared but its value is never read.
+src/components/viewers/Twin3D.tsx(47,19): error TS6133: '_wire' is declared but its value is never read.
