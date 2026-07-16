@@ -25,3 +25,12 @@ dist-ssr
 *.sw?
 
 venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# SQLite database (runtime data)
+*.db
+*.sqlite
