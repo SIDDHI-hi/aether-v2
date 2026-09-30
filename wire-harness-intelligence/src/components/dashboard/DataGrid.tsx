@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useStore } from '../../store/useStore';
 import {
   Database, Activity, Cpu, ChevronRight, ArrowUpDown,
-  Search, Filter, MapPin, Zap, PlugZap
+  Search, Filter, MapPin, PlugZap
 } from 'lucide-react';
 
 type SortKey = 'id' | 'label' | 'confidence';

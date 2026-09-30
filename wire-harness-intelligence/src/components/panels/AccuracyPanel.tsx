@@ -51,7 +51,7 @@ export const AccuracyPanel: React.FC = () => {
   const connections = data.connections || data.wires || [];
   const nodes = data.nodes || data.connectors || [];
 
-  const componentValidations: ComponentValidation[] = nodes.map((n: any, i: number): ComponentValidation => {
+  const componentValidations: ComponentValidation[] = nodes.map((n: any): ComponentValidation => {
     // Priority: 1. Real AI metadata, 2. Deterministic hash-based variety
     const baseConf = n.confidence || (90 + (n.id.charCodeAt(0) % 8));
     return {

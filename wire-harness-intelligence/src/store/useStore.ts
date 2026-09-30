@@ -39,6 +39,9 @@ interface AppState {
 
   xRayMode: boolean;
   setXRayMode: (val: boolean) => void;
+
+  pulsingIds: string[];
+  setPulsingIds: (ids: string[]) => void;
 }
 
 export const useStore = create<AppState>((set, get) => ({
@@ -204,4 +207,7 @@ export const useStore = create<AppState>((set, get) => ({
 
   xRayMode: false,
   setXRayMode: (val: boolean) => set({ xRayMode: val }),
+
+  pulsingIds: [],
+  setPulsingIds: (ids: string[]) => set({ pulsingIds: ids }),
 }));

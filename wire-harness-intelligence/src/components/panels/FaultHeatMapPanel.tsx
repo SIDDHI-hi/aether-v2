@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { AlertTriangle } from 'lucide-react';
 import { useStore } from '../../store/useStore';
+import type { Connector, Wire } from '../../mockData';
 
 export const FaultHeatMapPanel: React.FC = () => {
   const { data } = useStore();
@@ -16,8 +17,8 @@ export const FaultHeatMapPanel: React.FC = () => {
   };
 
   const allItems = [
-    ...data.connectors.map(c => ({ id: c.id, label: c.label, type: 'Connector', risk: data.risk_score[c.id] })),
-    ...data.wires.map(w => ({ id: w.id, label: w.label, type: 'Wire', risk: data.risk_score[w.id] }))
+    ...data.connectors.map((c: Connector) => ({ id: c.id, label: c.label, type: 'Connector', risk: data.risk_score[c.id] })),
+    ...data.wires.map((w: Wire) => ({ id: w.id, label: w.label, type: 'Wire', risk: data.risk_score[w.id] }))
   ].sort((a, b) => {
     const riskWeight = { high: 3, medium: 2, low: 1 };
     return (riskWeight[b.risk as keyof typeof riskWeight] || 0) - (riskWeight[a.risk as keyof typeof riskWeight] || 0);

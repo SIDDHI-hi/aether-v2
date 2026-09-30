@@ -4,7 +4,7 @@ import { useStore } from '../../store/useStore';
 import {
   Database, Activity, Cpu, SlidersHorizontal,
   Box, Upload, Loader2, Clipboard, Share2, ExternalLink,
-  MapPin, PlugZap, CheckCircle2, AlertCircle, XCircle
+  MapPin, PlugZap, CheckCircle2
 } from 'lucide-react';
 
 // Extend JSX intrinsic elements for Google's <model-viewer> custom element
