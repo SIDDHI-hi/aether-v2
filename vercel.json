@@ -1,6 +1,0 @@
-{
-  "buildCommand": "cd wire-harness-intelligence && npm install && npm run build",
-  "outputDirectory": "wire-harness-intelligence/dist",
-  "installCommand": "echo 'skip root install'",
-  "framework": null
-}
